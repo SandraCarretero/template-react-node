@@ -1,4 +1,4 @@
 export const HEADERS = {
-	Accept: 'aplication/json',
-	'Content-type': 'application/json'
+	Accept: 'application/json',
+	'Content-Type': 'application/json'
 };

@@ -3,13 +3,11 @@ import { METHODS } from '../constants/methods';
 import { fetchData } from './fetchData';
 
 export const getData = async url => {
-	const data = await fetchData(url, {
-		method: METHODS.GET
-	});
+	const data = await fetchData(url, { method: METHODS.GET });
 	return data;
 };
 
-export const postData = async (url, body = {}) => {
+export const postData = async (url, body) => {
 	const data = await fetchData(url, {
 		method: METHODS.POST,
 		body: JSON.stringify(body),
@@ -21,6 +19,7 @@ export const postData = async (url, body = {}) => {
 export const patchData = async url => {
 	const data = await fetchData(url, {
 		method: METHODS.PATCH,
+		body: JSON.stringify(body),
 		headers: HEADERS
 	});
 	return data;
